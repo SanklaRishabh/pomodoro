@@ -1,8 +1,12 @@
 import './style.css'
+import { Timer } from './objects/timer'
 
-const app = document.querySelector<HTMLDivElement>('#app')!
+function animate(time: number) {
 
-app.innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
+
+
+  requestAnimationFrame(animate)
+}
+
+const t = new Timer({t: 100});
+
